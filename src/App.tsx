@@ -7,7 +7,14 @@ import AppLayout from "./components/AppLayout";
 import Dashboard from "./pages/Dashboard";
 import MarkdownEditor from "./pages/MarkdownEditor";
 import ExpenseSplitter from "./pages/ExpenseSplitter";
-import ComingSoon from "./pages/ComingSoon";
+import RSSReader from "./pages/RSSReader";
+import DiffMerge from "./pages/DiffMerge";
+import Calendar from "./pages/Calendar";
+import Presentations from "./pages/Presentations";
+import PodcastPlayer from "./pages/PodcastPlayer";
+import BudgetTracker from "./pages/BudgetTracker";
+import AudioTagger from "./pages/AudioTagger";
+import EmailReader from "./pages/EmailReader";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,14 +30,14 @@ const App = () => (
             <Route path="/" element={<Dashboard />} />
             <Route path="/markdown" element={<MarkdownEditor />} />
             <Route path="/expenses" element={<ExpenseSplitter />} />
-            <Route path="/rss" element={<ComingSoon title="RSS Reader" description="Aggregate and read your favorite RSS & Atom feeds" />} />
-            <Route path="/diff" element={<ComingSoon title="Diff & Merge" description="Compare and merge text files with visual diff highlighting" />} />
-            <Route path="/calendar" element={<ComingSoon title="Calendar" description="Manage events and tame your time effectively" />} />
-            <Route path="/presentations" element={<ComingSoon title="Presentations" description="Create beautiful slides from Markdown with live preview" />} />
-            <Route path="/podcasts" element={<ComingSoon title="Podcast Player" description="Listen to and manage your podcast library" />} />
-            <Route path="/budget" element={<ComingSoon title="Budget Tracker" description="Track finances and manage your personal budget" />} />
-            <Route path="/audio" element={<ComingSoon title="Audio Tagger" description="Edit metadata tags for your audio files offline" />} />
-            <Route path="/email" element={<ComingSoon title="Email Reader" description="Browse and search MBOX email archives locally" />} />
+            <Route path="/rss" element={<RSSReader />} />
+            <Route path="/diff" element={<DiffMerge />} />
+            <Route path="/calendar" element={<Calendar />} />
+            <Route path="/presentations" element={<Presentations />} />
+            <Route path="/podcasts" element={<PodcastPlayer />} />
+            <Route path="/budget" element={<BudgetTracker />} />
+            <Route path="/audio" element={<AudioTagger />} />
+            <Route path="/email" element={<EmailReader />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AppLayout>
